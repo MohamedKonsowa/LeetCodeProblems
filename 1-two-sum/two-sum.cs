@@ -2,17 +2,17 @@ public class Solution
 {
     public int[] TwoSum(int[] nums, int target)
     {
-        HashSet<int> hashSet = new HashSet<int>();
+        Dictionary<int, int> dictionary = [];
         int n;
         for (int i = 0; i < nums.Length; i++)
         {
             n = target - nums[i];
-            if (hashSet.Contains(n))
+            if (dictionary.ContainsKey(n))
             {
-                return [Array.IndexOf(nums, n), i];
+                return [i, dictionary[n]];
             }
 
-            hashSet.Add(nums[i]);
+            dictionary[nums[i]] = i;
         }
         throw new ArgumentException("No two sum solution");
     }
