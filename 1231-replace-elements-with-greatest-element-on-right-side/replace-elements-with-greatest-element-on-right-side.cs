@@ -2,17 +2,12 @@ public class Solution
 {
     public int[] ReplaceElements(int[] arr)
     {
-        if(arr.Length == 1)
+        if (arr.Length == 1)
         {
             arr[0] = -1;
             return arr;
         }
-        else if (arr.Length == 2)
-        {
-            arr[0] = arr[1];
-            arr[1] = -1;
-            return arr;
-        }
+
         int maxRight = Math.Max(arr[^1], arr[^2]);
         int temp;
         arr[^2] = arr[^1];
