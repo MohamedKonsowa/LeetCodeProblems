@@ -2,7 +2,8 @@ public class Solution
 {
     public int LengthOfLastWord(string s)
     {
-        string[]? samples = s.Trim().Split(' ');
+        s = s.Trim();
+        string[]? samples = s.Split(' ');
 
         return samples[^1].Length;
     }
