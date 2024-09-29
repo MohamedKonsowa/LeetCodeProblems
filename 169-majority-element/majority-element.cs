@@ -15,6 +15,6 @@ public class Solution
                 dict.Add(num, 1);
             }
         }
-            return dict.FirstOrDefault(x => x.Value > nums.Length / 2).Key;
+            return dict.First(x => x.Value > nums.Length / 2).Key;
     }
 }
