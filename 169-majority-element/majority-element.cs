@@ -15,6 +15,15 @@ public class Solution
                 dict.Add(num, 1);
             }
         }
-            return dict.First(x => x.Value > nums.Length / 2).Key;
+
+        foreach (var item in dict)
+        {
+            if (item.Value > nums.Length / 2)
+            {
+                return item.Key;
+            }
+        }
+
+        return -1;
     }
 }
