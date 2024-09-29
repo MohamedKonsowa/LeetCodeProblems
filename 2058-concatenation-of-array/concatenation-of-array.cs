@@ -2,10 +2,14 @@ public class Solution
 {
     public int[] GetConcatenation(int[] nums)
     {
-        List<int> result = new(nums);
+        int[] result = new int[nums.Length * 2];
 
-        result.AddRange(nums);
+        for (int i = 0; i < nums.Length; i++)
+        {
+            result[i] = nums[i];
+            result[i + nums.Length] = nums[i];
+        }
 
-        return [.. result];
+        return result;
     }
 }
