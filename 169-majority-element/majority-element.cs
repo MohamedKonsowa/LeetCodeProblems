@@ -9,6 +9,11 @@ public class Solution
             if (dict.ContainsKey(num))
             {
                 dict[num]++;
+
+                if (dict[num] > nums.Length / 2)
+                {
+                    return num;
+                }
             }
             else
             {
