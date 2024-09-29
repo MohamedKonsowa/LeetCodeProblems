@@ -6,10 +6,12 @@ public class Solution
 
         var sArray = s.ToCharArray();
         Array.Sort(sArray);
+        s = new string(sArray);
 
         var tArray = t.ToCharArray();
         Array.Sort(tArray);
+        t = new string(tArray);
 
-        return sArray.SequenceEqual(tArray);
+        return s == t;
     }
 }
