@@ -25,11 +25,7 @@ public class Solution
 
         foreach (var item in dict)
         {
-            list.AddRange(item.Value);
-
-            result.Add(list);
-
-            list = [];
+            result.Add(item.Value);
         }
 
         return result;
