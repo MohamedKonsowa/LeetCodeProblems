@@ -13,6 +13,6 @@ public class Solution
             else
                 freqArray.Add(n, 1);
         }
-        return freqArray.OrderByDescending(k => k.Value).Select(k => k.Key).Take(k).ToArray();
+        return freqArray.OrderByDescending(k => k.Value).Take(k).Select(k => k.Key).ToArray();
     }
 }
