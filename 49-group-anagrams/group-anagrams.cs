@@ -23,11 +23,8 @@ public class Solution
             }
         }
 
-        foreach (var item in dict)
-        {
-            result.Add(item.Value);
-        }
-
+        result.AddRange(from item in dict
+                        select item.Value);
         return result;
     }
 }
